@@ -1,4 +1,4 @@
-class ReservationsController < ActionController::Base
+class ReservationsController < ApplicationController
 
   def create
   end
