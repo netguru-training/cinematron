@@ -69,10 +69,10 @@ ActiveRecord::Schema.define(version: 20150124140834) do
 
   create_table "seats", force: true do |t|
     t.integer "seat_type"
-    t.integer "movie_id"
+    t.integer "hall_id"
   end
 
-  add_index "seats", ["movie_id"], name: "index_seats_on_movie_id", using: :btree
+  add_index "seats", ["hall_id"], name: "index_seats_on_hall_id", using: :btree
 
   create_table "tickets", force: true do |t|
     t.string   "ticket_type"
