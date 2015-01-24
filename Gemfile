@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'haml-rails'
 gem 'bootstrap-generators', '~> 3.3.1'
+gem 'decent_exposure'
 
 group :development do
   gem 'spring'
