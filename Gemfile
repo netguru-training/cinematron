@@ -11,6 +11,7 @@ gem 'simple_form'
 gem 'haml-rails'
 gem 'bootstrap-generators', '~> 3.3.1'
 gem 'decent_exposure'
+gem 'decent_decoration'
 gem 'draper', '~> 1.3'
 
 group :development do
