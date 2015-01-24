@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+movie = Movie.create({ title: 'Matrix', description: '01001100' })
+#ticket = Ticket.create({ })
