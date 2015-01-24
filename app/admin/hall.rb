@@ -1,5 +1,8 @@
 ActiveAdmin.register Hall do
 
+  form do |f|
+    render partial: 'new_seat', locals: { f: f }
+  end
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
