@@ -12,6 +12,8 @@ gem 'haml-rails'
 gem 'decent_exposure'
 gem 'decent_decoration'
 gem 'draper', '~> 1.3'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
 
 group :development do
   gem 'spring'
