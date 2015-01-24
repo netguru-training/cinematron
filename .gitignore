@@ -46,3 +46,5 @@ config/sec_config.yml
 /.idea/
 tags
 
+
+config/database.yml
