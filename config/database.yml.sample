@@ -1,0 +1,15 @@
+connection: &connection
+  adapter: postgresql
+  encoding: unicode
+  host:     localhost
+  pool: 5
+  username: madmadlen
+  password:
+
+development:
+  <<: *connection
+  database: cinematron_dev
+
+test: &test
+  <<: *connection
+  database: cinematron_test
