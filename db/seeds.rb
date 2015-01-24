@@ -7,4 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 movie = Movie.create({ title: 'Matrix', description: '01001100' })
-#ticket = Ticket.create({ })
+ticket = Ticket.create({ ticket_type: 'child2D', price: 12.23, movie_id: movie.id })
+reservation = Reservation.create({ fullname: 'John Doe', email: 'hello@hello.com', movie_id: movie.id })
+hall = Hall.create({ movie_id: movie.id })
+seat = Seat.create({ hall_id: hall.id, seat_type: 1 })
+reservation_details = ReservationDetails.create({ ticket_id: ticket.id, seat_id: seat.id, reservation_id: reservation.id })
+admin_user = AdminUser.create({ email: 'hello@hello.com', password: 'hello123'})

@@ -6,7 +6,7 @@ class Hall < ActiveRecord::Base
   def generate_seats
    transaction do
       100.times do
-        Seat.create(seat_type: 0, movie: self)
+        Seat.create(seat_type: 0, hall: self)
       end
    end
   end
