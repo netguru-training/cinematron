@@ -32,3 +32,16 @@ build/
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+.*.swp
+.*.swo
+/.bundle
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+/log/*.log
+/tmp
+config/database.yml
+config/sec_config.yml
+
+tags
