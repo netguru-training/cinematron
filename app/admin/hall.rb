@@ -17,5 +17,4 @@ ActiveAdmin.register Hall do
   #   permitted
   # end
 
-
 end

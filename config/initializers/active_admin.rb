@@ -158,7 +158,7 @@ ActiveAdmin.setup do |config|
   # and feel.
   #
   # To load a stylesheet:
-    config.register_stylesheet 'cinematron.scss'
+    # config.register_stylesheet 'cinematron.scss'
 
   #
   # You can provide an options hash for more control, which is passed along to stylesheet_link_tag():
