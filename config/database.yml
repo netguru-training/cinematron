@@ -8,8 +8,8 @@ default: &default
   adapter: postgresql
   host: localhost
   pool: 5
-  username: cinematron
-  password: local
+  username: madmadlen
+  password:
 
 development:
   <<: *default
