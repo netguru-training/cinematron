@@ -1,7 +1,7 @@
 .container
   .col-md-12
     - 20.times do |row|
-      %div
+      %div{ id: "row#{row}" }
         - 20.times do |index|
           .seat{ data: { seat_id: "#seat#{index}" }}
           = render 'shared/seats_modal', row: row, index: index

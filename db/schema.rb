@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150125124935) do
   create_table "halls", force: true do |t|
     t.integer "movie_id"
     t.json    "layout",   default: {}
+    t.string  "name"
   end
 
   add_index "halls", ["movie_id"], name: "index_halls_on_movie_id", using: :btree
@@ -71,6 +72,8 @@ ActiveRecord::Schema.define(version: 20150125124935) do
   create_table "seats", force: true do |t|
     t.integer "seat_type"
     t.integer "hall_id"
+    t.integer "row"
+    t.integer "column"
   end
 
   add_index "seats", ["hall_id"], name: "index_seats_on_hall_id", using: :btree

@@ -1,16 +1,5 @@
 class Hall < ActiveRecord::Base
-
   has_many :seats
   belongs_to :movie
-
-  after_create :generate_seats
-
-  def generate_seats
-   transaction do
-      100.times do
-        Seat.create(seat_type: 0, hall: self)
-      end
-   end
-  end
 
 end
