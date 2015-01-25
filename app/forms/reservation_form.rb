@@ -1,18 +1,15 @@
 class ReservationForm
   include SimpleFormObject
 
-  attribute :ticket_id, :string
+  attribute :ticket_id, :integer
   attribute :email, :string
   attribute :fullname, :string
-  attribute :seat_id, :string
-
-  validates_presence_of :email, :fullname
+  attribute :seat_id, :integer
+  attribute :user_id, :integer
 
   def save
-    if valid?
-      reservation = Reservation.create(reservation_params)
-      reservation.reservation_details.create(reservation_detail_params)
-    end
+    reservation = Reservation.create(reservation_params)
+    reservation.reservation_details.create(reservation_detail_params)
   end
 
   private
@@ -23,17 +20,20 @@ class ReservationForm
 
   def reservation_params
     {
-        email: email,
-        fullname: fullname,
-        movie_id: ticket(ticket_id).movie.id
+      email: current_user.email,
+      fullname: current_user.fullname,
+      movie_id: ticket(ticket_id).movie.id
     }
   end
 
   def reservation_detail_params
     {
-        seat_id: seat_id,
-        ticket_id: ticket_id
+      seat_id: seat_id,
+      ticket_id: ticket_id
     }
   end
 
+  def current_user
+    User.find(user_id)
+  end
 end

@@ -6,14 +6,8 @@
           %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
             %span{"aria-hidden" => "true"} ×
           %h4#myModalLabel.modal-title
-            Rząd: "#{row+1}", Miejsce: "#{index+1}"
+            Miejsce: "#{index+1}"
         .modal-body
-          .form-group
-            = f.label :fullname
-            = f.text_field :fullname, class: 'form-control'
-          .form-group
-            = f.label :email
-            = f.text_field :email, class: 'form-control'
           .form
             = f.label :ticket_type
             = f.select :ticket_id, options_from_collection_for_select(movie.tickets, :id, :ticket_type), class: 'selectpicker'
