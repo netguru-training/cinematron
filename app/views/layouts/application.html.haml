@@ -27,6 +27,11 @@
         #navbar.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li.active= link_to 'Home', root_path
+          %ul.nav.navbar-nav
+            - if current_user.present?
+              %li.active= link_to 'Wyloguj sie', sessions_path, method: 'delete'
+            - else
+              %li.active= link_to 'Zaloguj się', 'auth/facebook'
     .container
       = render 'layouts/flash_msgs'
       = yield

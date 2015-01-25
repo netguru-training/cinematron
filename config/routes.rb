@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   resources :movies, only: [:index, :show]
   resources :reservations, only: [:create, :destroy]
+  resource :sessions, only: :destroy
+
+  get '/auth/:provider/callback', to: 'sessions#create'
 
   root to: 'movies#index'
 end
