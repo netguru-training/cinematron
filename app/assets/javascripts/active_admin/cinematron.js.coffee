@@ -22,16 +22,18 @@ $ ->
 
   $('#layout').on 'click', '.seat', (e) ->
 
-    if parseInt($(this).children().val() == 1)
-      $(this).children().val(0)
-    else
-      console.log 'test'
-      $(this).children().val(1)
+    # if parseInt($(this).children().val() == 1)
+    #   $(this).children().val(0)
+    # else
+    #   console.log 'test'
+    #   $(this).children().val(1)
 
     unless $(this).hasClass('alley')
       $(this).addClass('alley')
+      $(this).children().val(0)
     else
       $(this).removeClass('alley')
+      $(this).children().val(1)
 
 
 
