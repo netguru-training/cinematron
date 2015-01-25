@@ -32,6 +32,9 @@
               %li.active= link_to 'Wyloguj sie', sessions_path, method: 'delete'
             - else
               %li.active= link_to 'Zaloguj się', 'auth/facebook'
+          %p.navbar-text.navbar-right
+            = link_to 'Login as an admin', admin_dashboard_path
+
     .container
       = render 'layouts/flash_msgs'
       = yield
