@@ -1,17 +1,11 @@
 .container
   .col-md-12
-    \ Rows: 
+    \ Rows:
     = select_tag "rows", options_for_select(1..20), id: 'rows'
     \ Columns:
     = select_tag "columns", options_for_select(1..40), id: 'columns'
     = submit_tag "submit", id: 'submit_details'
 
 
-    .row.layout-row
+    .layout-row
       #layout
-
-    -# - 20.times do
-    -#   %div
-    -#     - 20.times do
-    -#       .seat
-    -#     %br
