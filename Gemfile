@@ -16,6 +16,9 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'simple_form_object'
 gem 'thin'
+gem 'omniauth-facebook'
+gem 'rails_config'
+
 
 group :development do
   gem 'pry-rails'
