@@ -1,6 +1,8 @@
 class Hall < ActiveRecord::Base
 
   has_many :seats
+  belongs_to :movie
+
   after_create :generate_seats
 
   def generate_seats
