@@ -7,7 +7,9 @@
         %h4#myModalLabel.modal-title
           Rząd: "#{row+1}", Miejsce: "#{index+1}"
       .modal-body
-        = index
+        = form_for reservation_form do |f|
+          = f.select :ticket_id, options_from_collection_for_select(movie.tickets, :id, :ticket_type)
+          = f.submit
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
         %button.btn.btn-primary{:type => "button"} Save changes
