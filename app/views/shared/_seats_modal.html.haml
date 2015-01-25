@@ -1,16 +1,25 @@
 .modal.fade{id: "seat#{index}", "aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
-  .modal-dialog
-    .modal-content
-      .modal-header
-        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
-          %span{"aria-hidden" => "true"} ×
-        %h4#myModalLabel.modal-title
-          Rząd: "#{row+1}", Miejsce: "#{index+1}"
-      .modal-body
-        = form_for reservation_form do |f|
-          = f.select :ticket_id, options_from_collection_for_select(movie.tickets, :id, :ticket_type)
-          = f.submit
-      .modal-footer
+  = form_for reservation_form do |f|
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+            %span{"aria-hidden" => "true"} ×
+          %h4#myModalLabel.modal-title
+            Rząd: "#{row+1}", Miejsce: "#{index+1}"
+        .modal-body
+          .form-group
+            = f.label :fullname
+            = f.text_field :fullname, class: 'form-control'
+          .form-group
+            = f.label :email
+            = f.text_field :email, class: 'form-control'
+          .form
+            = f.label :ticket_type
+            = f.select :ticket_id, options_from_collection_for_select(movie.tickets, :id, :ticket_type), class: 'selectpicker'
+            = f.hidden_field :seat_id, :value => "#{index}"
+        .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
-        %button.btn.btn-primary{:type => "button"} Save changes
+        %button.btn.btn-primary{:type => "#{f.submit}"} Save changes
         %br
+      .clearfix

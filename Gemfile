@@ -18,6 +18,7 @@ gem 'simple_form_object'
 gem 'thin'
 
 group :development do
+  gem 'pry-rails'
   gem 'spring'
   gem 'quiet_assets'
   gem 'better_errors'
