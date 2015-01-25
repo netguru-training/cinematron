@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :movies, only: [:index, :show]
+  resources :reservations, only: [:create, :destroy]
 
   root to: 'movies#index'
 end
