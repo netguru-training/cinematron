@@ -14,7 +14,12 @@ gem 'decent_decoration'
 gem 'draper', '~> 1.3'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem 'simple_form_object'
+gem 'thin'
 
 group :development do
   gem 'spring'
+  gem 'quiet_assets'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
