@@ -22,4 +22,4 @@ $ ->
       $(this).children().val(0)
 
   seatTemplate = (row_id) ->
-    "<div class='seat'><input name='layout[#{row_id}][]' type='hidden' value=1 class='seat_type' /></div>"
+    "<div class='seat'><input name='hall[layout[#{row_id}]][]' type='hidden' value=1 class='seat_type' /></div>"
